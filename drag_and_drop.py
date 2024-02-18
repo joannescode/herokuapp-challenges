@@ -7,7 +7,7 @@ test_herokuapp.configurations_bot()
 test_herokuapp.get_page()
 test_herokuapp.select_challenges()
 
-driver = test_herokuapp.driver_()
+driver = test_herokuapp.driver_instance()
 challenge_title = driver.find_element(By.TAG_NAME, "h3")
 print(f"Testing {challenge_title.text}... \n")
 
