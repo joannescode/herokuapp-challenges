@@ -4,8 +4,8 @@ from selenium.webdriver.common.by import By
 
 class SearchChallenges():
 	def __init__(
-		self, url_page, name_challenge):
-		self.url_page = url_page
+		self, name_challenge):
+		self.url_page = "https://the-internet.herokuapp.com/"
 		self.name_challenge = name_challenge
 		self.configurations_bot()
 
@@ -14,6 +14,10 @@ class SearchChallenges():
 		configurations.add_argument("--headless")
 		configurations.add_argument("--start-maximized")
 		self.driver = webdriver.Chrome(options=configurations)
+
+	def driver_instance(self):
+		self.driver
+		return self.driver
 
 	def get_page(self):
 		self.driver.get(self.url_page)
@@ -34,7 +38,7 @@ class SearchChallenges():
 					pass
 
 # Example Usage
-test_herokuapp = SearchChallenges(url_page="https://the-internet.herokuapp.com/",name_challenge="Drag and Drop")
-test_herokuapp.configurations_bot()
-test_herokuapp.get_page()
-test_herokuapp.select_challenges()
+#test_herokuapp = SearchChallenges(name_challenge="Drag and Drop")
+#test_herokuapp.configurations_bot()
+#test_herokuapp.get_page()
+#test_herokuapp.select_challenges()
