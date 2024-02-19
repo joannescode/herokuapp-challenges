@@ -2,7 +2,6 @@ import sys
 sys.path.append('/home/lucas-joannes/Documents/herokuapp-challenges')
 from class_search.SearchChallenges import *
 from selenium.webdriver.common.action_chains import ActionChains 
-import time
 
 test_herokuapp = SearchChallenges(name_challenge="Drag and Drop")
 test_herokuapp.configurations_bot()
