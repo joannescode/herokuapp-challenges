@@ -13,6 +13,7 @@ class SearchChallenges():
 		configurations = webdriver.ChromeOptions()
 		configurations.add_argument("--headless")
 		configurations.add_argument("--start-maximized")
+		configurations.add_argument("--incognito")
 		self.driver = webdriver.Chrome(options=configurations)
 
 	def driver_instance(self):
