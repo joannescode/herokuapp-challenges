@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/home/lucas-joannes/Documents/herokuapp-challenges')
+sys.path.append('/home/joannes/Documents/herokuapp-challenges')
 from class_search.SearchChallenges import *
 from PIL import Image
 
