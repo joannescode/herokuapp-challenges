@@ -4,7 +4,7 @@ from class_search.SearchChallenges import *
 from PIL import Image
 
 test_herokuapp = SearchChallenges(name_challenge= "Basic Auth")
-test_herokuapp.configurations_bot()
+test_herokuapp.browser_configurations()
 driver = test_herokuapp.driver_instance()
 
 # Credentials for concat in url string

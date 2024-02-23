@@ -4,7 +4,7 @@ from class_search.SearchChallenges import *
 from selenium.webdriver.common.action_chains import ActionChains 
 
 test_herokuapp = SearchChallenges(name_challenge="Drag and Drop")
-test_herokuapp.configurations_bot()
+test_herokuapp.browser_configurations()
 test_herokuapp.get_page()
 test_herokuapp.select_challenges()
 

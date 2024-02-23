@@ -7,9 +7,9 @@ class SearchChallenges():
 		self, name_challenge):
 		self.url_page = "https://the-internet.herokuapp.com/"
 		self.name_challenge = name_challenge
-		self.configurations_bot()
+		self.browser_configurations()
 
-	def configurations_bot(self):	
+	def browser_configurations(self):	
 		configurations = webdriver.ChromeOptions()
 		configurations.add_argument("--headless")
 		configurations.add_argument("--start-maximized")

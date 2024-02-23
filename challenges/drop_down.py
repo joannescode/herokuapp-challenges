@@ -6,7 +6,7 @@ import random
 from colorama import Fore
 
 test_herokuapp = SearchChallenges(name_challenge="Dropdown")
-test_herokuapp.configurations_bot()
+test_herokuapp.browser_configurations()
 test_herokuapp.get_page()
 test_herokuapp.select_challenges()
 
