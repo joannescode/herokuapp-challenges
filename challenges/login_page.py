@@ -1,7 +1,7 @@
 import sys
 import itertools
 import time
-
+from colorama import Fore
 sys.path.append("/home/joannes/Documents/herokuapp-challenges")
 from class_search.SearchChallenges import *
 
@@ -28,7 +28,7 @@ test_herokuapp.select_challenges()
 
 driver = test_herokuapp.driver_instance()
 challenge_title = driver.find_element(By.TAG_NAME, "h2")
-print(f"Testing {challenge_title.text}")
+print(f"Testing {challenge_title.text}\n")
 
 authentication_list = list(itertools.product(usernames, passwords))
 
@@ -46,15 +46,17 @@ for username_value, password_value in authentication_list:
     login_button = driver.find_element(By.CLASS_NAME, "radius")
     login_button.click()
     authentication_message = driver.find_element(By.ID, "flash").text
+    print(f"Trying to access with username {username_value} and password {password_value}")
     if "You logged into a secure area!" in authentication_message:
-        print(
-            f"Access with username: {username_value} with password: {password_value} sucessful!"
-        )
+        print(Fore.GREEN + f"\nAccess with username: '{username_value}' with password: '{password_value}' sucessful!" + Fore.RESET)
         break
     else:
         username, password = elements_for_login()
         username.clear()
         password.clear()
 
+logout_button = driver.find_element(By.XPATH,'/html/body/div[2]/div/div/a')
+logout_button.click()
+print("\nTest Finished.")
 
 # credits to Daniel Miessler for sharing the seclists on github
