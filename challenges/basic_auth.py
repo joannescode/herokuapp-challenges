@@ -1,6 +1,6 @@
 import sys
 sys.path.append('/home/joannes/Documents/herokuapp-challenges')
-from class_search.SearchChallenges import *
+from libs.SearchChallenges import *
 from PIL import Image
 
 test_herokuapp = SearchChallenges(name_challenge= "Basic Auth")

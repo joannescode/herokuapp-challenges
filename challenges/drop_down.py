@@ -1,6 +1,6 @@
 import sys
 sys.path.append("/home/joannes/Documents/herokuapp-challenges")
-from class_search.SearchChallenges import *
+from libs.SearchChallenges import *
 from selenium.webdriver.support.ui import Select
 import random
 from colorama import Fore

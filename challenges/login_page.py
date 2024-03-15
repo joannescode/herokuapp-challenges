@@ -3,7 +3,7 @@ import itertools
 import time
 from colorama import Fore
 sys.path.append("/home/joannes/Documents/herokuapp-challenges")
-from class_search.SearchChallenges import *
+from libs.SearchChallenges import *
 
 path_seclists = "/home/joannes/Documents/herokuapp-challenges/seclists"
 
